@@ -46,3 +46,46 @@ Prob 3 evolution
         find if they are proper subgroup or no intersection
         proper means (num_common == N_A or num_common == 0)
 
+## Sort
+* Bubble sort
+* A[N]
+* ? Permutation, how many? -> N!
+* Permutation P[N], for i=0:N; P[i] = i
+* Reason for permutation array -- P[N] is one more level of abstraction from A[N]
+* inverse pair
+```
+for i=0:N-1
+    for j=0:i
+        if A[i] > A[j]
+            swap(A[i], A[j])  -- tmp = A[[i], A[i] = A[j], A[j] = tmp;                       
+```
+* each sub loop biggest bubble to top 
+* N-1 guarantee n-1 bubbles, -> all must be sorted 
+
+Complexity - Big O notation -- O(N2)
+
+* insertion sort
+    foreach -- N
+        pick
+        insert
+          find -- N
+          shift -- N
+          put-it-in
+* Complexit O(N2)
+
+Insertion sort is more reliable, more robust 
+Other than easy write, there is *NO* benefit for bubble sort
+
+* selection sort
+*   foreach -- N
+*       find/select (smallest) -- N
+*       shift  -- N
+*       put-it-in
+```
+for i=0:N
+   min = INT_MIN
+   for j = i:N
+       if min > A[j]
+          min = A[j]
+   swap(A[i], A[i_min])     
+```
