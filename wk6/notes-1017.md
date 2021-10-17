@@ -1,6 +1,6 @@
 Wk 6
 =====
-
+```
 std::cin, std::cout, std::cin>>var; std::cout<<var;
 
 -- FILE* In = fopen("file", "r"); fscanf(In, "%d", &var);
@@ -10,11 +10,11 @@ scanf("%d", &var);
 -- FILE* Out = fopen("file", "w"); fprintf(Out, "%d\n", var);
 
 printf("%d\n", var);
-
+```
 ## prob1 - Cow Gymnastics
 
 In bronze: **cononical** for-loop, for (int i = i0; i < max; i++)  # [min, max)
-
+```
 count = 0
 foreach pair
     order = 0
@@ -29,21 +29,23 @@ foreach pair
         count++
         
  printf("%d\n", count)       **Always: use braces **
- 
+ ```
+ ```
  foreach pair ->   for(int i=0; i<N; i++) {
                        for (int j =0; j<i; j++) {
                            ...
                        }
                    }
+ ```                  
  How do you traslate from a permutation to order          
  
  Preprocess --
- P[]  P[i] --- cow P[i] is at position i
- Q[]  Q[i] --- cow i is at position Q[i]
- 
+ * P[]  P[i] --- cow P[i] is at position i
+ * Q[]  Q[i] --- cow i is at position Q[i]
+ ```
  for i=0:N
      Q[P[i]] = i
-     
+ ```    
      
 ## Prob 2 - where am I
 
@@ -51,6 +53,7 @@ foreach pair
   * seq of 1  
   * seq of 2
   * ...
+``` 
 char A[100]  --> scanf("%s", A)
 for k = 1:N
     for i=0:N-(k-1)
@@ -60,9 +63,9 @@ for k = 1:N
     ans = k;            
     break;            
     next_k: continue;
-    
+```    
 ## Prob 3 - Lineup
-
+```
 char ID_list[8][20] = {"Bessie", "Buttercup", ..., "Sue"};
 >> N
 char tmp[6][20];
@@ -78,8 +81,9 @@ int num_adj[8]
 int Cow[8][2]
 for i=0:8
    num_adj[i] = 0
-
+```
 ### utility functions
+```
 int find_cow(char * name)
    for (int i=0:8) {
        if strcmp(name, ID_list[i]) == 0
@@ -95,7 +99,7 @@ void add_adj(int a, int b)
     } else {
         printf("ERROR PANIC!");
     }
-   
+```   
 1. Work on the semantics
 2. work out the logics
 3. work out what data (structure) you need -- how natural
