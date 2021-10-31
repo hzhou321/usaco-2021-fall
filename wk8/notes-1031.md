@@ -49,7 +49,7 @@ swap(B)
 
 point 0, outside both A and B range, cycle == 0
 point A[0], cycle > 0
-
+```
 What we need realize is -- in a permutation, different points have different cycles.
 
 ```
